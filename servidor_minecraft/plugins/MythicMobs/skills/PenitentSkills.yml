@@ -1,0 +1,871 @@
+  P1:
+   Cooldown: 3
+   Conditions:
+   - targetWithin 5
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=35}
+   - state{state=attack1} @Self
+   - setspeed{s=1.1;delay=2} @Self
+   - addtag{t=ParryReady;delay=11} @self
+   - removetag{t=ParryReady;delay=14} @self
+   - delay 15
+   - metaskill{s=P1D} @self
+   - delay 10
+   - setspeed{s=1.6;delay=2} @Self
+  P1D:
+   Conditions:
+   - hastag{t=ParryReady} false
+   - hastag{t=OnParry} false
+   Skills:
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - damage{a=18;pi=true} @EIC{r=4.5}
+   - throw{velocity=20;velocityY=1} @EIC{r=4.5}
+   - shieldbreak{duration=60} @EIC{r=4.5}
+  Parry1:
+   Cooldown: 1.5
+   Conditions:
+   - skillOnCooldown{skill=Parry2} false
+   - hastag{t=ParryReady} true
+   - chance{chance=1} true
+   Skills:
+   - potion{type=SLOW;duration=15;level=6;hasparticles=false} @self 
+   - sound{s=custom:penitentparry;p=0.9;v=1} @Self
+   - sound{s=custom:penitentparry2;p=0.9;v=0.5} @Self
+   - cancelevent
+   - addtag{t=OnParry} @self
+   - stun{d=12;face=true} @trigger
+   - recoil{r=5;pitch=-5to-5} @trigger
+   - state{state=attack9} @Self
+   - delay 13
+   - removetag{t=OnParry} @self
+  Parry2:
+   Cooldown: 3
+   Conditions:
+   - skillOnCooldown{skill=Parry1} false
+   - hastag{t=ParryReady} true
+   - chance{chance=1} true
+   Skills:
+   - cancelevent
+   - addtag{t=OnParry} @self
+   - sound{s=custom:penitentparry;p=0.9;v=1} @Self
+   - sound{s=custom:penitentparry2;p=0.9;v=0.5} @Self
+   - setspeed{s=0;repeat=15;repeatinterval=2} @Self
+   - state{state=attack10} @Self
+   - stun{d=12;face=true} @trigger
+   - recoil{r=5;pitch=-5to-5;delay=3} @trigger
+   - sound{s=block.bell.use;p=1.5;v=0.5;delay=3} @target
+   - sound{s=entity.blaze.hurt;p=0.6;v=0.5;delay=3} @target
+   - sendtitle{subtitle="&l&4♗✝♗";d=15;delay=3} @target
+   - sound{s=custom:penitentsweep;p=0.9;v=2;delay=14} @Self
+   - damage{a=18;pi=true;delay=16} @EIC{r=4.5}
+   - throw{velocity=17;velocityY=1} @EIC{r=4.5}
+   - shieldbreak{duration=50} @EIC{r=4.5}
+   - delay 32
+   - setspeed{s=1.6;delay=2} @Self
+   - delay 7
+   - removetag{t=OnParry} @self
+  P2:
+   Cooldown: 3
+   Conditions:
+   - targetWithin 5
+   - offgcd true
+   - targetnotwithin{d=2} true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=40}
+   - state{state=attack2} @Self
+   - setspeed{s=0.9;delay=2} @Self
+   - addtag{t=ParryReady;delay=16} @self
+   - removetag{t=ParryReady;delay=19} @self
+   - delay 20
+   - metaskill{s=P2D} @self
+   - delay 12
+   - setspeed{s=1.6;delay=2} @Self
+  P2D:
+   Conditions:
+   - hastag{t=ParryReady} false
+   - hastag{t=OnParry} false
+   Skills:
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - sound{s=custom:penitentsmash;p=1;v=0.5;delay=1} @Self
+   - damage{a=20;pi=true} @EIC{r=4.5;a=25}
+  P3:
+   Cooldown: 3
+   Conditions:
+   - targetWithin 5
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=35}
+   - state{state=attack3} @Self
+   - setspeed{s=1.1;delay=2} @Self
+   - addtag{t=ParryReady;delay=11} @self
+   - removetag{t=ParryReady;delay=14} @self
+   - delay 15
+   - metaskill{s=P3D} @self
+   - delay 12
+   - setspeed{s=1.6;delay=2} @Self
+  P3D:
+   Conditions:
+   - hastag{t=ParryReady} false
+   - hastag{t=OnParry} false
+   Skills:
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - damage{a=18;pi=true} @EIC{r=4.5}
+   - throw{velocity=20;velocityY=1} @EIC{r=4.5}
+   - shieldbreak{duration=60} @EIC{r=4.5}
+  P4:
+   Cooldown: 3
+   Conditions:
+   - targetWithin 5
+   - targetnotwithin{d=2.5} true
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=35}
+   - state{state=attack4} @Self
+   - setspeed{s=0.8;delay=2} @Self
+   - addtag{t=ParryReady;delay=11} @self
+   - removetag{t=ParryReady;delay=14} @self
+   - delay 15
+   - metaskill{s=P4D} @self
+   - delay 12
+   - setspeed{s=1.6;delay=2} @Self
+  P4D:
+   Conditions:
+   - hastag{t=ParryReady} false
+   - hastag{t=OnParry} false
+   Skills:
+   - sound{s=custom:penitentsweep;p=1;v=2} @Self
+   - damage{a=18;pi=true} @EIC{r=5;a=25}
+   - stun{d=25} @EIC{r=5;a=25}
+  P5:
+   Cooldown: 10
+   Conditions:
+   - targetWithin 5
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=75}
+   - state{state=attack5} @Self
+   - sound{s=block.bell.use;p=1.5;v=0.5} @target
+   - sound{s=entity.blaze.hurt;p=0.6;v=0.5} @target
+   - sendtitle{subtitle="&l&4♗✝♗";d=25} @PIR{r=9}
+   - setspeed{s=1.1;delay=2} @Self
+   - sound{s=custom:penitentsweep;p=0.9;v=2;delay=13} @Self
+   - delay 15
+   - damage{a=18} @EIC{r=5}
+   - sound{s=custom:penitentsweep;p=0.8;v=2;delay=18} @Self
+   - delay 20
+   - sound{s=custom:penitentsweep;p=0.75;v=2;delay=15} @Self
+   - damage{a=18} @EIC{r=5}
+   - delay 17
+   - damage{a=18} @EIC{r=4.5}
+   - throw{velocity=20;velocityY=1} @EIC{r=4.5}
+   - shieldbreak{duration=60} @EIC{r=4.5}
+   - delay 12
+   - setspeed{s=1.6;delay=2} @Self
+  P6:
+   Cooldown: 8
+   Conditions:
+   - targetWithin 5
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=50}
+   - state{state=attack6} @Self
+   - setspeed{s=0;delay=2} @Self
+   - sound{s=item.armor.equip_netherite;p=1.2;v=0.8;delay=3;repeat=2;repeatinterval=1.5} @Self
+   - disengage{v=2.5;delay=4} @target
+   - setAI{ai=false;delay=9} @self
+   - sound{s=block.bell.use;p=1.5;v=0.5} @target
+   - sound{s=entity.blaze.hurt;p=0.6;v=0.5} @target
+   - sendtitle{subtitle="&l&4♗✝♗";d=25} @target
+   - delay 23
+   - sound{s=custom:penitentsweep;p=0.75;v=2;delay=3} @Self
+   - lunge{v=5.5;vy=0.1} @target
+   - sound{s=item.armor.equip_netherite;p=1.2;v=0.8;repeat=3;repeatinterval=1.5} @Self
+   - delay 6
+   - damage{a=18;repeat=3;repeatinterval=2} @EIR{r=3}
+   - throw{velocity=20;velocityY=1;repeat=3;repeatinterval=3} @EIR{r=3}
+   - shieldbreak{duration=60;delay=6} @EIR{r=3}
+   - setAI{ai=true} @self
+   - delay 14
+   - setspeed{s=1.6;delay=2} @Self
+  P7:
+   Cooldown: 10
+   Conditions:
+   - targetWithin 14
+   - targetnotwithin{d=8} true
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=24}
+   - state{state=attack7} @Self
+   - sound{s=item.armor.equip_netherite;p=1.2;v=0.5;delay=4;repeat=8;repeatinterval=1.5} @Self
+   - setspeed{s=2.8;delay=5} @Self
+   - setspeed{s=1.6;delay=20} @Self
+  P8:
+   Cooldown: 4
+   Conditions:
+   - targetWithin 5
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=30}
+   - state{state=attack8} @Self
+   - setspeed{s=0} @Self
+   - sound{s=item.armor.equip_netherite;p=1;v=0.2;delay=5;repeat=3;repeatinterval=4} @Self
+   - disengage{v=0.8;delay=6;repeat=4;repeatinterval=2} @target
+   - setspeed{s=1.6;delay=27} @Self
+  P9:
+   Cooldown: 50
+   Conditions:
+   - targetWithin 6
+   - offgcd true
+   - hastag{t=OnParry} false
+   - health{h=<240} true
+   Skills:
+   - gcd{ticks=145}
+   - state{state=attack8} @Self
+   - setspeed{s=0;repeat=5;repeatinterval=5} @Self
+   - sound{s=item.armor.equip_netherite;p=1;v=0.2;delay=5;repeat=3;repeatinterval=4} @Self
+   - disengage{v=0.8;delay=6;repeat=9;repeatinterval=1} @target
+   - delay 32
+   - state{state=attack11} @Self
+   - delay 80
+   - throw{velocity=15;velocityY=1;repeat=3;repeatinterval=8} @EIR{r=4}
+   - heal{amount=80} @self
+   - delay 25
+   - setspeed{s=1.6} @Self
+  P10:
+   Cooldown: 2
+   Conditions:
+   - offgcd true
+   - hastag{t=OnParry} false
+   - damagecause{cause=PROJECTILE} true
+   - chance{chance=0.5} true
+   Skills:
+   - cancelevent
+   - gcd{ticks=18}
+   - sound{s=item.armor.equip_netherite;p=1.2;v=0.6;repeat=5;repeatinterval=1} @Self
+   - lunge{v=1;vy=0.1} @RandomLocationsNearCaster{a=8;r=2}
+   - state{state=attack7;sp=1.6} @Self
+  P11:
+   Cooldown: 15
+   Conditions:
+   - targetWithin 12
+   - targetnotwithin{d=6} true
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=45}
+   - state{state=attack12} @Self
+   - setspeed{s=0} @Self
+   - delay 18
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - pull{velocity=8} 
+      ];v=22;i=0.1;hR=0.3;vR=0.1;sE=true;sB=true;g=0;syo=1.8;tyo=1.5;eso=0;mr=13} @forward
+   - setspeed{s=1.6;delay=20} @Self
+  P12:
+   Cooldown: 7
+   Conditions:
+   - targetWithin 12
+   - targetnotwithin{d=6} true
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=65}
+   - state{state=attack13} @Self
+   - setspeed{s=0} @Self
+   - delay 22
+   - setspeed{s=2.8} @Self
+   - delay 16
+   - setspeed{s=0} @Self
+   - damage{a=25} @EIC{r=4.5}
+   - sound{s=custom:penitentsweep;p=0.85;v=2} @Self
+   - delay 25
+   - setspeed{s=1.6} @Self
+  P13:
+   Cooldown: 25
+   Conditions:
+   - targetWithin 25
+   - targetnotwithin{d=8} true
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=50}
+   - state{state=attack14} @Self
+   - setspeed{s=0} @self
+   - delay 10
+   - projectile{
+     oT=[
+     ];oE=[
+        - summon{type=small_rose;amount=1;radius=0;os=true;yr=0;delay=6}
+        - summon{type=blood_explosion;amount=1;radius=0;os=true;yr=0} 
+     ];bullet=MOB;mob=blood_seed;v=15;i=0.1;hR=1;vR=1;sE=false;sB=true;g=1;syo=1.5;tyo=5;eso=0;vn=5;hn=8} @Ring{r=5-7;p=10}
+   - setspeed{s=1.6;delay=15} @self
+  P14:
+   Cooldown: 10
+   Conditions:
+   - targetWithin 20
+   - targetnotwithin{d=8} true
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=100}
+   - state{state=attack15} @Self
+   - setspeed{s=0} @Self
+   - delay 17
+   - sound{s=custom:penitentsweep;p=0.85;v=2} @Self
+   - damage{a=22} @EIC{r=4.5}
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=22} 
+      ];bullet=MOB;mob=blood_cut;v=22;i=0.1;hR=1;vR=0.01;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=0} @forward 
+   - delay 25
+   - sound{s=custom:penitentsweep;p=0.85;v=2} @Self
+   - damage{a=22} @EIC{r=4.5}
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=22} 
+      ];bullet=MOB;mob=blood_cut;v=22;i=0.1;hR=1;vR=0.01;sE=false;sB=true;g=0;syo=1.6;tyo=1.6;eso=0} @forward 
+   - delay 25
+   - sound{s=custom:penitentsweep;p=0.85;v=2} @Self
+   - damage{a=22} @EIC{r=4.5}
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=22} 
+      ];bullet=MOB;mob=blood_cut;v=22;i=0.1;hR=1;vR=0.01;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=0} @forward
+   - setspeed{s=1.6;delay=15} @Self  
+  P15:
+   Cooldown: 10
+   Conditions:
+   - targetWithin 20
+   - targetnotwithin{d=8} true
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=40}
+   - state{state=attack16} @Self
+   - setspeed{s=0} @Self
+   - delay 17
+   - sound{s=custom:penitentsweep;p=0.85;v=2} @Self
+   - damage{a=18} @EIC{r=4.5}
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=22} 
+      ];bullet=MOB;mob=blood_cut;v=22;i=0.1;hR=1;vR=0.01;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=0} @forward
+   - setspeed{s=1.6;delay=14} @Self
+  P16:
+   Cooldown: 15
+   Conditions:
+   - targetWithin 8
+   - targetnotwithin{d=4} true
+   - offgcd true
+   - hastag{t=OnParry} false
+   Skills:
+   - gcd{ticks=50}
+   - state{state=attack17} @Self
+   - setspeed{s=0} @Self
+   - delay 16
+   - pull{v=8} @EIC{r=8;a=75}
+   - setspeed{s=1.6;delay=23} @Self
+  FPDA:
+   Cooldown: 2
+   Conditions:
+   - offgcd true
+   - damagecause{cause=PROJECTILE} true
+   Skills:
+   - cancelevent
+   - state{state=attack12} @Self
+   - gcd{ticks=17}
+  dodge1:
+   Cooldown: 5
+   Conditions:
+   - offgcd true
+   - chance{chance=1} true
+   Skills:
+   - cancelevent
+   - setspeed{s=0} @Self
+   - state{state=attack10} @Self
+   - setspeed{s=0.9;delay=14} @Self
+   - gcd{ticks=20}
+  dodge2:
+   Cooldown: 6.5
+   Conditions:
+   - offgcd true
+   - targetWithin 5
+   - chance{chance=1} true
+   Skills:
+   - cancelevent
+   - setspeed{s=0} @Self
+   - state{state=attack11} @Self
+   - gcd{ticks=24}
+   - delay 16
+   - damage{a=25} @EIC{r=5.5;a=50}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - sound{s=custom:fire;p=2;v=0.5} @Self
+   - summon{type=Penitent_fire;amount=1;radius=0;os=true;yr=0} @EIC{r=5.5;a=50}
+   - setspeed{s=0.9;delay=5} @Self
+  FP1:
+   Cooldown: 6
+   Conditions:
+   - targetWithin 6
+   - offgcd true
+   Skills:
+   - gcd{ticks=45}
+   - state{state=attack1} @Self
+   - delay 13
+   - damage{a=25} @EIC{r=5}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - delay 13
+   - damage{a=25} @EIC{r=5.5;a=55}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - summon{type=Penitent_fire;amount=1;radius=0;os=true;yr=0} @EIC{r=5.5;a=55}
+   - throw{velocity=15;velocityY=5;delay=2} @EIC{r=5.5}
+  FP2:
+   Cooldown: 6
+   Conditions:
+   - targetWithin 6
+   - offgcd true
+   Skills:
+   - gcd{ticks=65}
+   - state{state=attack2} @Self
+   - delay 10
+   - damage{a=25;pi=true} @EIC{r=5}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0} @EIC{r=5}
+   - delay 18
+   - damage{a=25;pi=true} @EIC{r=5}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0} @EIC{r=5}
+   - delay 15
+   - damage{a=25;pi=true} @EIC{r=5}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0} @EIC{r=5}
+   - throw{velocity=15;velocityY=5;delay=2} @EIC{r=5}
+  FP3:
+   Cooldown: 6
+   Conditions:
+   - targetWithin 6
+   - offgcd true
+   Skills:
+   - gcd{ticks=40}
+   - state{state=attack3} @Self
+   - delay 12
+   - damage{a=25;pi=true} @EIC{r=5;a=40}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - delay 10
+   - damage{a=25;pi=true} @EIC{r=5;a=40}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0} @EIC{r=5;a=40}
+   - throw{velocity=15;velocityY=5;delay=2} @EIC{r=5;a=40}
+  FP4:
+   Cooldown: 8
+   Conditions:
+   - targetWithin 8
+   - targetnotwithin{d=5} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=50}
+   - state{state=attack4} @Self
+   - delay 35
+   - pull{v=8} @EIC{r=8;a=75}
+  FP5:
+   Cooldown: 10
+   Conditions:
+   - targetWithin 12
+   - targetnotwithin{d=6} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=45}
+   - state{state=attack5} @Self
+   - delay 18
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - pull{velocity=8} 
+      ];v=22;i=0.1;hR=0.3;vR=0.1;sE=true;sB=true;g=0;syo=1.8;tyo=1.5;eso=0;mr=13} @forward
+  FP6:
+   Cooldown: 7
+   Conditions:
+   - targetWithin 15
+   - targetnotwithin{d=6} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=43}
+   - state{state=attack6} @Self
+   - setspeed{s=0} @Self
+   - delay 22
+   - setspeed{s=3.5} @Self
+   - delay 15
+   - setspeed{s=0.9} @Self
+   - damage{a=25} @EIC{r=4}
+   - sound{s=entity.player.attack.knockback;p=0;v=2} @Self
+   - throw{velocity=15;velocityY=5;delay=2} @EIC{r=4}
+  FP7:
+   Cooldown: 6
+   Conditions:
+   - targetWithin 15
+   - targetnotwithin{d=6} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=65}
+   - state{state=attack7} @Self
+   - setspeed{s=3;delay=14} @Self
+   - summon{type=Penitent_fire;amount=1;radius=0;os=true;yr=0;delay=14;repeat=8;repeatinterval=2} @self
+   - delay 17
+   - damage{a=25;pi=true;repeat=2;repeatinterval=4} @EIC{r=5;a=40}
+   - sound{s=custom:fire;p=1;v=2;repeat=2;repeatinterval=4} @Self
+   - setspeed{s=0.9;delay=13} @Self
+   - delay 16
+   - damage{a=25;pi=true} @EIC{r=5;a=60}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - sound{s=custom:fire;p=1;v=2} @Self
+   - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0} @EIC{r=5;a=60}
+   - throw{velocity=15;velocityY=12;delay=2} @EIC{r=5;a=60}
+  FP8:
+   Cooldown: 6
+   Conditions:
+   - targetWithin 30
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=45}
+   - state{state=attack8} @Self
+   - setspeed{s=0} @Self
+   - delay 10
+   - sound{s=entity.ender_dragon.flap;p=1;v=3} @Self
+   - jump{velocity=1} @self
+   - delay 10
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=30} 
+      ];bullet=MOB;mob=blood_cut;v=22;i=0.1;hR=1;vR=0.01;sE=false;sB=true;g=0;syo=1.6;tyo=0.5;eso=0} @PIR{r=50}
+   - potion{type=SLOW_FALLING;duration=60;level=1;delay=11} @self
+   - delay 15
+   - setspeed{s=0.9} @Self
+  FP9:
+   Cooldown: 8
+   Conditions:
+   - targetWithin 30
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=40}
+   - state{state=attack9} @Self
+   - delay 20
+   - sound{s=custom:penitentsweep;p=0.85;v=2} @Self
+   - damage{a=25} @EIC{r=4.5}
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=25} 
+      ];bullet=MOB;mob=blood_cut;v=22;i=0.1;hR=1;vR=0.01;sE=false;sB=true;g=0;syo=1.3;tyo=1;eso=0} @PIR{r=50}
+  FP10:
+   Cooldown: 5
+   Conditions:
+   - targetWithin 5
+   - offgcd true
+   Skills:
+   - gcd{ticks=14}
+   - state{state=attack13} @Self
+   - delay 3
+   - disengage{v=1.5} @target
+  FP11:
+   Cooldown: 25
+   Conditions:
+   - targetWithin 30
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=55}
+   - state{state=attack14} @Self
+   - delay 16
+   - sound{s=entity.witch.throw;p=0;v=2} @Self
+   - projectile{
+     oT=[
+     ];oE=[
+        - summon{type=big_rose;amount=1;radius=0;os=true;yr=0;delay=6}
+        - summon{type=blood_explosion;amount=1;radius=0;os=true;yr=0} 
+     ];bullet=MOB;mob=blood_seed2;v=15;i=0.1;hR=1;vR=1;sE=false;sB=true;g=1;syo=1.5;tyo=5;eso=0;vn=5;hn=8} @Ring{r=5-7;p=10}
+  FP12:
+   Cooldown: 25
+   Conditions:
+   - targetWithin 50
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=100}
+   - setspeed{s=0} @Self
+   - throw{v=15;vY=3;repeat=40;repeatinterval=2} @EIR{r=7}
+   - sound{s=custom:bell;p=0;v=3;delay=5} @Self
+   - state{state=attack15} @Self
+   - delay 80
+   - summon{type=Blood_rain;amount=1;radius=6;os=true;yr=0;repeat=3;repeatinterval=10} @PIR{r=60}
+   - summon{type=Blood_rain;amount=1;radius=0;os=true;yr=0;repeat=5;repeatinterval=8} @PIR{r=60}
+   - summon{type=Blood_rain;amount=4;radius=16;os=true;yr=0;repeat=3;repeatinterval=15} @Self
+   - setspeed{s=0.9;delay=8} @Self
+  FP13:
+   Cooldown: 40
+   Conditions:
+   - targetWithin 50
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=280}
+   - setAI{ai=false} @self
+   - sound{s=custom:bell;p=0;v=3} @Self
+   - throw{v=15;vY=3;repeat=40;repeatinterval=6} @EIR{r=5.5}
+   - state{state=attack16} @Self
+   - setAI{ai=true;delay=250} @self
+   - delay 70
+   - sound{s=custom:bell;p=1.5;v=3} @Self
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=30}
+         - stun{d=20}
+      ];bullet=MOB;mob=sound_wave;v=30;i=0.1;hR=1;vR=1;sE=false;sB=true;g=0;syo=4;tyo=0.5;eso=0;bulletmatchdirection=true} @PIR{r=50}
+   - delay 56
+   - sound{s=custom:bell;p=1.5;v=3} @Self
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=30}
+         - stun{d=20}
+      ];bullet=MOB;mob=sound_wave;v=30;i=0.1;hR=1;vR=0.01;sE=false;sB=true;g=0;syo=4;tyo=0.5;eso=0;bulletmatchdirection=true} @PIR{r=50}
+   - delay 50
+   - sound{s=custom:bell;p=1.5;v=3} @Self
+   - projectile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=30}
+         - stun{d=20}
+      ];bullet=MOB;mob=sound_wave;v=30;i=0.1;hR=1;vR=0.01;sE=false;sB=true;g=0;syo=4;tyo=0.5;eso=0;bulletmatchdirection=true} @PIR{r=50}
+   - delay 51
+   - sound{s=entity.witch.throw;p=0;v=3} @Self
+   - projectile{
+     oH=[
+     ];oE=[
+        - summon{type=bell2;amount=1;radius=0;os=true}
+     ];bullet=MOB;mob=bell1;v=14;i=0.1;hR=2;vR=2;sE=false;sB=true;g=0.75;syo=10.3;tyo=35;eso=0;bulletmatchdirection=true} @target
+  FP14:
+   Cooldown: 40
+   Conditions:
+   - targetWithin 50
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=100}
+   - state{state=attack17} @Self
+   - setspeed{s=0} @Self
+   - setspeed{s=0.9;delay=80} @Self
+   - sound{s=custom:bell;p=0;v=3;delay=10} @Self
+   - delay 70
+   - summon{type=pendulum;amount=1;radius=3;os=true} @PIR{r=50}
+   - missile{
+      oT=[
+      
+      ];oH=[
+         - damage{a=5}
+      ];bullet=MOB;mob=wheel;v=5;i=0.1;hR=1.3;vR=0.4;sE=false;sB=false;g=0;syo=2;tyo=1;eso=0;bulletmatchdirection=true;hs=true;md=500;id=5;in=70} @PIR{r=50}
+  FP15:
+   Cooldown: 50
+   Conditions:
+   - targetWithin 50
+   - offgcd true
+   - health{h=<400} true
+   Skills:
+   - gcd{ticks=155}
+   - setspeed{s=0;repeat=5;repeatinterval=5} @Self
+   - state{state=attack18} @Self
+   - sound{s=custom:bell;p=0;v=3;delay=10} @Self
+   - delay 80
+   - throw{velocity=15;velocityY=1;repeat=3;repeatinterval=8} @EIR{r=4}
+   - heal{amount=80} @self
+   - delay 25
+   - setspeed{s=0.9} @Self
+  FP16:
+   Cooldown: 20
+   Conditions:
+   - targetWithin 50
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=65}
+   - state{state=attack19} @Self
+   - delay 12
+   - damage{a=25} @EIC{r=5}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - sound{s=custom:fire;p=1;v=2} @Self
+   - projectile{
+      oT=[
+         - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0}
+      ];oH=[
+         - damage{a=25}
+      ];bullet=MOB;mob=Cfire;v=22;i=0.5;hR=0.5;vR=0.5;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=0} @PIR{r=50}
+   - delay 12
+   - damage{a=25} @EIC{r=5}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - sound{s=custom:fire;p=1;v=2} @Self
+   - projectile{
+      oT=[
+         - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0}
+      ];oH=[
+         - damage{a=25}
+      ];bullet=MOB;mob=Cfire;v=22;i=0.5;hR=0.5;vR=0.5;sE=false;sB=true;g=0;syo=1.6;tyo=1.6;eso=0} @PIR{r=50}
+   - delay 12
+   - damage{a=25} @EIC{r=5}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - sound{s=custom:fire;p=1;v=2} @Self
+   - projectile{
+      oT=[
+         - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0}
+      ];oH=[
+         - damage{a=25} 
+      ];bullet=MOB;mob=Cfire;v=22;i=0.5;hR=0.5;vR=0.5;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=0} @PIR{r=50}
+  FP17:
+   Cooldown: 20
+   Conditions:
+   - targetWithin 50
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=65}
+   - state{state=attack20} @Self
+   - delay 24
+   - damage{a=25} @EIC{r=5}
+   - sound{s=custom:penitentsweep;p=0.9;v=2} @Self
+   - sound{s=custom:fire;p=1;v=2} @Self
+   - projectile{
+      oT=[
+         - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0}
+      ];oH=[
+         - damage{a=25}
+      ];bullet=MOB;mob=Cfire;v=22;i=0.5;hR=0.5;vR=0.5;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=0} @forward
+   - projectile{
+      oT=[
+         - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0}
+      ];oH=[
+         - damage{a=25}
+      ];bullet=MOB;mob=Cfire;v=22;i=0.5;hR=0.5;vR=0.5;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=2.5} @forward
+   - projectile{
+      oT=[
+         - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0}
+      ];oH=[
+         - damage{a=25}
+      ];bullet=MOB;mob=Cfire;v=22;i=0.5;hR=0.5;vR=0.5;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=5} @forward
+   - projectile{
+      oT=[
+         - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0}
+      ];oH=[
+         - damage{a=25}
+      ];bullet=MOB;mob=Cfire;v=22;i=0.5;hR=0.5;vR=0.5;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=-5} @forward
+   - projectile{
+      oT=[
+         - summon{type=Penitent_fire;amount=1;radius=1;os=true;yr=0}
+      ];oH=[
+         - damage{a=25}
+      ];bullet=MOB;mob=Cfire;v=22;i=0.5;hR=0.5;vR=0.5;sE=false;sB=true;g=0;syo=1.6;tyo=1.5;eso=-2.5} @forward
+  FP18:
+   Cooldown: 20
+   Conditions:
+   - targetWithin 50
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=65}
+   - state{state=attack21} @Self
+   - delay 26
+   - sound{s=entity.witch.throw;p=0;v=2} @Self
+   - sound{s=custom:fire;p=1;v=2} @Self
+   - projectile{
+      oT=[
+      ];oE=[
+         - summon{type=CExplosion;amount=1;radius=1;os=true;yr=0}
+         - summon{type=Chandelier2;amount=1;radius=1;os=true;yr=0}
+      ];bullet=MOB;mob=Chandelier1;v=22;i=0.1;hR=1.5;vR=1.5;sE=false;sB=true;g=1.6;syo=1.6;tyo=6;eso=0:sso=-0.7} @target
+  rat1:
+   Cooldown: 2
+   Conditions:
+   - targetWithin 2
+   - offgcd true
+   Skills:
+   - setspeed{s=0} @Self
+   - state{state=attack} @Self
+   - delay 10
+   - damage{a=5;pi=true} @EIC{r=2.5}
+   - delay 10
+   - setspeed{s=1} @Self
+  FP19:
+   Cooldown: 35
+   Conditions:
+   - targetWithin 50
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=65}
+   - state{state=attack22} @Self
+   - delay 18
+   - projectile{
+      oT=[
+      ];oH=[
+         - potion{type=HUNGER;duration=200;level=1}
+         - damage{a=15;pi=true}
+      ];bullet=MOB;mob=Flood;v=11;i=0.1;hR=2;vR=2;sE=false;sB=true;g=0;syo=1.6;tyo=1;eso=0} @target
+  FP20:
+   Cooldown: 35
+   Conditions:
+   - targetWithin 50
+   - targetnotwithin{d=8} true
+   - offgcd true
+   Skills:
+   - gcd{ticks=100}
+   - setspeed{s=0} @Self
+   - setspeed{s=0.9;delay=84} @Self
+   - sound{s=custom:bell;p=0;v=3;delay=10} @Self
+   - throw{v=15;vY=3;repeat=37;repeatinterval=2} @EIR{r=5.5}
+   - state{state=attack23} @Self
+   - delay 74
+   - projectile{
+      oE=[
+      ];oH=[
+         - damage{a=20;pi=true}
+         - summon{type=blood_explosion;amount=1;radius=0;os=true}
+      ];bullet=MOB;mob=sword;v=19;i=0.1;hR=0.3;vR=0.1;sE=false;sB=true;syo=0.6;tyo=0.6;eso=0;mr=40} @Ring{r=2;p=60} 
+
+
+
+
+
+
+   
+
+   
+
+
+   
+   

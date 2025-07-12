@@ -1,0 +1,697 @@
+Penitent:
+  Type: VINDICATOR
+  Display: Penitent
+  Health: 500
+  Faction: GOD
+  Damage: 0
+  Armor: 0
+  DamageModifiers:
+  - FALL 0
+  BossBar:
+    Enabled: true
+    Title: ' ®    ' 
+    Range: 100
+    Color: RED
+    Style: SEGMENTED_20
+  Modules:
+   ThreatTable: true
+  Options:
+    PreventOtherDrops: true
+    Despawn: false
+    MaxCombatDistance: 256
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.18
+    Collidable: true
+    FollowRange: 80
+    KnockbackResistance: 100
+    MovementSpeed: 0.3
+    AttackSpeed: 1
+    NoDamageTicks: 10
+    NoAI: false
+    Silent: true
+  Skills:
+  - randomskill{s=P1 1, P2 1, P3 1, P4 1, P5 0.6, P6 0.7, P7 1, P8 2, P9 1} ~onTimer:10
+  - randomskill{s=Parry2 0.2, Parry1 1;sync=true} @self ~onDamaged
+  - metaskill{s=P10;sync=true} @self ~onDamaged
+  - cancelevent @self ~onAttack
+  - model{modelid=penitent;damagetint=false} @Self ~onSpawn
+  - state{state=damage} @Self ~onDamaged
+  - setAI{ai=false} @self ~onSpawn
+  - sound{s=entity.vindicator.hurt;p=0.7;v=0.4} @self ~onDamaged
+  - potion{type=DAMAGE_RESISTANCE;duration=160;level=100} @self ~onSpawn
+  - setAI{ai=true;delay=160} @self ~onSpawn
+  - summon{type=TP2;amount=1;radius=0;os=true;delay=300} @self ~onDeath
+  - remove{delay=341} @self ~onDeath
+Penitent2:
+  Type: VINDICATOR
+  Display: Penitent
+  Health: 550
+  Faction: GOD
+  Damage: 0
+  Armor: 0
+  DamageModifiers:
+  - FALL 0
+  BossBar:
+    Enabled: true
+    Title: ' ©    ' 
+    Range: 100
+    Color: RED
+    Style: SEGMENTED_20
+  Modules:
+   ThreatTable: true
+  Options:
+    PreventOtherDrops: true
+    Despawn: false
+    MaxCombatDistance: 256
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.18
+    Collidable: true
+    FollowRange: 80
+    KnockbackResistance: 100
+    MovementSpeed: 0.3
+    AttackSpeed: 1
+    NoDamageTicks: 10
+    NoAI: false
+    Silent: true
+  Skills:
+  - randomskill{s=P1 1, P2 1, P3 1, P4 1, P5 0.6, P6 0.7, P7 1, P8 2, P9 1, P11 1, P12 1, P13 1, P14 1, P15 1, P16 1} ~onTimer:10
+  - randomskill{s=Parry2 0.3, Parry1 1;sync=true} @self ~onDamaged
+  - metaskill{s=P10;sync=true} @self ~onDamaged
+  - cancelevent @self ~onAttack
+  - model{modelid=penitent_phase_2;damagetint=false} @Self ~onSpawn
+  - state{state=damage} @Self ~onDamaged
+  - summon{type=foot1;amount=1;radius=0;os=true;yr=0} @self ~onTimer:8
+  - sound{s=entity.vindicator.hurt;p=0.7;v=0.4} @self ~onDamaged
+  - sound{s=custom:bell;p=0;v=3;delay=60} @Self ~onDeath
+  - sound{s=custom:stab;p=1;v=3;delay=96} @Self ~onDeath
+  - sound{s=custom:penitentparry2;p=1.2;v=1;delay=98} @Self ~onDeath
+  - summon{type=TP3;amount=1;radius=0;os=true;delay=60} @self ~onDeath
+  - remove{delay=125} @self ~onDeath
+  - summon{type=foot2;amount=1;radius=0;os=true;yr=0;delay=6} @self ~onTimer:8 
+blood_seed:
+ Type: SKELETON
+ Display: Spirit Cut
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=small_blood_seed;damagetint=false} @Self ~onSpawn
+ - effect:particles{particle=reddust;color=#53000B;amount=1;hS=0;vS=0;s=0;y=0.8;size=1.5;s=0} @self ~onTimer:1
+small_rose:
+  Type: SKELETON
+  Display: Small Rose
+  Health: 
+  Faction: GOD
+  Damage: 0
+  Armor: 0
+  DamageModifiers:
+  - FALL 0
+  Modules:
+   ThreatTable: true
+  Options:
+    NoGravity: true
+    PreventOtherDrops: true
+    Despawn: false
+    MaxCombatDistance: 256
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.18
+    Collidable: false
+    FollowRange: 80
+    KnockbackResistance: 100
+    MovementSpeed: 0
+    AttackSpeed: 1
+    Invincible: false
+    NoAI: true
+    Silent: true
+  Skills:
+  - sound{s=custom:grow;p=0.5;v=2} @Self ~onSpawn
+  - sound{s=block.grass.break;p=0;v=0.5;delay=1} @Self ~onSpawn
+  - sound{s=block.grass.break;p=0;v=0.5;delay=18} @Self ~onSpawn
+  - sound{s=block.mangrove_roots.break;p=0;v=0.5;delay=18} @Self ~onSpawn
+  - sound{s=block.roots.break;p=0;v=0.5;delay=20} @Self ~onSpawn
+  - model{modelid=small_penitent_roses;damagetint=false} @Self ~onSpawn
+  - damage{a=3;pi=true;delay=2} @PIR{r=0.75} ~onTimer:2
+  - state{state=damage} @Self ~onDamaged
+blood_explosion:
+ Type: SKELETON
+ Display: Bloos
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - sound{s=custom:splash;p=0.6;v=0.2} @Self ~onSpawn
+ - model{modelid=blood_explode;damagetint=false} @Self ~onSpawn
+ - damage{a=15;delay=2} @EIR{r=1.2} ~onSpawn
+ - remove{delay=30} @self ~onSpawn
+blood_cut:
+ Type: SKELETON
+ Display: Blood Cut
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - effect:particles{particle=reddust;color=#53000B;amount=10;hS=0.5;vS=0;s=0.3;y=1.35;size=1} @self ~onTimer:1
+ - model{modelid=blood_cut_effect;damagetint=false} @Self ~onSpawn
+foot1:
+ Type: SKELETON
+ Display: Blood Cut
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=left_blood_footprint;damagetint=false} @Self ~onSpawn
+ - remove{delay=25} @self ~onSpawn
+foot2:
+ Type: SKELETON
+ Display: Blood Cut
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=right_blood_footprint;damagetint=false} @Self ~onSpawn
+ - remove{delay=25} @self ~onSpawn
+Final_Penitence:
+  Type: VINDICATOR
+  Display: Final Penitence
+  Health: 600
+  Faction: GOD
+  Damage: 0
+  Armor: 0
+  DamageModifiers:
+  - FALL 0
+  BossBar:
+    Enabled: true
+    Title: ' ⭒    ' 
+    Range: 100
+    Color: RED
+    Style: SEGMENTED_20
+  Modules:
+   ThreatTable: true
+  Options:
+    PreventOtherDrops: true
+    Despawn: false
+    MaxCombatDistance: 256
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.18
+    Collidable: true
+    FollowRange: 80
+    KnockbackResistance: 100
+    MovementSpeed: 0.17
+    AttackSpeed: 1
+    NoDamageTicks: 10
+    NoAI: false
+    Silent: true
+  Skills:
+  - randomskill{s=FP1 1, FP2 1, FP3 1, FP4 1, FP5 1, FP6 1, FP7 1, FP8 1, FP9 1, FP10 1, FP11 1, FP12 1, FP13 1, FP14 1, FP15 1, FP16 1, FP17 1, FP18 1, FP19 1, FP20 10} ~onTimer:30
+  - randomskill{s=dodge1 1, dodge2 0.4;sync=true} @self ~onDamaged
+  - metaskill{s=FPDA;sync=true} @self ~onDamaged
+  - cancelevent @self ~onAttack
+  - model{modelid=penitent_phase_3;damagetint=false} @Self ~onSpawn
+  - state{state=damage} @Self ~onDamaged
+  - setAI{ai=false} @self ~onSpawn
+  - setAI{ai=true;delay=240} @self ~onSpawn
+  - potion{type=DAMAGE_RESISTANCE;duration=240;level=100} @self ~onSpawn
+  - summon{type=foot1;amount=1;radius=0;os=true;yr=0} @self ~onTimer:20
+  - sound{s=custom:fire;p=1;v=2;delay=156} @Self ~onSpawn
+  - sound{s=entity.vindicator.hurt;p=0.7;v=0.4} @self ~onDamaged
+  - sound{s=custom:penitentsweep;p=0.9;v=2;delay=193} @Self ~onSpawn
+  - sound{s=custom:penitentsweep;p=0.9;v=2;delay=212} @Self ~onSpawn
+  - summon{type=foot2;amount=1;radius=0;os=true;yr=0;delay=10} @self ~onTimer:20
+Penitent_fire:
+ Type: SKELETON
+ Display: Penitent Fire
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=penitent_fire;damagetint=false} @Self ~onSpawn
+ - damage{a=1;pk=true;pi=true} @PIR{r=0.8} ~onTimer:10
+ - ignite{ticks=40} @PIR{r=0.8} ~onTimer:3
+ - state{state=death;delay=100} @Self ~onSpawn
+ - remove{delay=105} @self ~onSpawn
+blood_seed2:
+ Type: SKELETON
+ Display: Spirit Cut
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=big_blood_seed;damagetint=false} @Self ~onSpawn
+ - effect:particles{particle=reddust;color=#53000B;amount=1;hS=0;vS=0;s=0;y=0.8;size=2;s=0} @self ~onTimer:1
+big_rose:
+  Type: SKELETON
+  Display: Big Rose
+  Health: 10
+  Faction: GOD
+  Damage: 0
+  Armor: 0
+  DamageModifiers:
+  - FALL 0
+  Modules:
+   ThreatTable: true
+  Options:
+    NoGravity: true
+    PreventOtherDrops: true
+    Despawn: false
+    MaxCombatDistance: 256
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.18
+    Collidable: false
+    FollowRange: 80
+    KnockbackResistance: 100
+    MovementSpeed: 0
+    AttackSpeed: 1
+    Invincible: false
+    NoAI: true
+    Silent: true
+  Skills:
+  - sound{s=custom:grow;p=0.5;v=2} @Self ~onSpawn
+  - sound{s=block.grass.break;p=0;v=0.5;delay=1} @Self ~onSpawn
+  - sound{s=block.grass.break;p=0;v=0.5;delay=18} @Self ~onSpawn
+  - sound{s=block.mangrove_roots.break;p=0;v=0.5;delay=18} @Self ~onSpawn
+  - sound{s=block.roots.break;p=0;v=0.5;delay=20} @Self ~onSpawn
+  - model{modelid=big_penitent_roses;damagetint=false} @Self ~onSpawn
+  - damage{a=6;pi=true;delay=2} @PIR{r=1} ~onTimer:2
+  - state{state=damage} @Self ~onDamaged
+Blood_rain:
+ Type: SKELETON
+ Display: Bloos
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - sound{s=custom:penitentsmash;p=2;v=0.1;delay=12} @Self
+ - model{modelid=blood_rain;damagetint=false} @Self ~onSpawn
+ - damage{a=20;delay=10} @PIR{r=1} ~onSpawn
+ - remove{delay=95} @self ~onSpawn
+ - effect:particles{particle=reddust;color=#CE0B44;amount=2;hS=0;vS=0;s=0;y=0.5;size=1.2;s=0} @modelpart{mid=blood_rain;pid=projectile_sword} ~onTimer:1
+sound_wave:
+ Type: SKELETON
+ Display: Blood Cut
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=sound_wave;damagetint=false} @Self ~onSpawn
+ - look{headOnly=false;immediately=true;force=true} @NearestPlayer{r=60} ~onTimer:1
+bell1:
+ Type: SKELETON
+ Display: Bell
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=bell_projectile;damagetint=false} @Self ~onSpawn
+bell2:
+ Type: SKELETON
+ Display: Bell
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: true
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=bell_proyectile2;damagetint=false} @Self ~onSpawn
+ - damage{a=40;delay=2} @PIR{r=7.5} ~onSpawn
+ - sound{s=custom:bell;p=1;v=3} @Self ~onSpawn
+ - throw{v=15;vY=3;repeat=5;repeatinterval=2} @PIR{r=7.5} ~onSpawn
+ - potion{type=SLOW;duration=80;level=2} @PIR{r=7.5;delay=2} ~onSpawn
+ - potion{type=CONFUSION;duration=80;level=2} @PIR{r=7.5;delay=2} ~onSpawn
+ - remove{delay=130} @self ~onSpawn
+pendulum:
+ Type: SKELETON
+ Display: Pendulum
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  MovementSpeed: 0.15
+  NoAI: false
+  Invincible: true
+  FollowRange: 200
+ Skills:
+ - model{modelid=pendulum;damagetint=false} @Self ~onSpawn
+ - cancelevent @self ~onAttack
+ - remove{delay=1000} @self ~onSpawn
+ - state{state=caca;delay=150} @Self ~onSpawn
+ - skill{s=[
+      - damage{a=20} @LivingNearTargetLocation{r=1.5}
+    ]} @modelpart{mid=pendulum;pid=damage} ~onTimer:3
+ - effect:particles{particle=poof;amount=1;hS=0;vS=0;speed=0} @modelpart{mid=pendulum;pid=damage} ~onTimer:1
+wheel:
+ Type: SKELETON
+ Display: wheel
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=wheel;damagetint=false} @Self ~onSpawn
+ - sound{s=custom:wheel;p=1;v=0.3;repeat=100;repeatinterval=5} @Self ~onSpawn
+Cfire:
+ Type: SKELETON
+ Display: Chandelier Fire
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=chandelier_fire_charge;damagetint=false} @Self ~onSpawn
+Chandelier1:
+ Type: SKELETON
+ Display: Chandelier Fire
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=chandelier_projectile1;damagetint=false} @Self ~onSpawn
+Chandelier2:
+ Type: SKELETON
+ Display: Chandelier Fire
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - sound{s=custom:fire;p=1;v=2} @Self ~onSpawn
+ - model{modelid=chandelier_projectile2;damagetint=false} @Self ~onSpawn
+ - remove{delay=80} @self ~onSpawn
+CExplosion:
+ Type: SKELETON
+ Display: Chandelier Fire
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=chandelier_explode;damagetint=false} @Self ~onSpawn
+ - damage{a=40} @PIR{r=5.5} ~onSpawn
+ - throw{v=15;vY=3;repeat=5;repeatinterval=2;delay=3} @PIR{r=5} ~onSpawn
+ - projectile{
+     oT=[
+     ];oE=[
+        - summon{type=Penitent_fire;amount=1;radius=0;os=true;yr=0} 
+     ];bullet=MOB;mob=Cfire;v=15;i=0.1;hR=1;vR=1;sE=false;sB=true;g=1;syo=1.5;tyo=15;eso=0;vn=5;hn=8;delay=4} @Ring{r=8-10;p=10} ~onSpawn
+ - remove{delay=34} @self ~onSpawn
+Flood:
+ Type: SKELETON
+ Display: Lobsters
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - sound{s=entity.bee.loop;p=0.7;v=4;delay=2} @Self ~onSpawn
+ - model{modelid=lobsters;damagetint=false} @Self ~onSpawn
+ - summon{type=Rat;amount=1;radius=1;os=true;yr=0;repeat=3;repeatinterval=5;delay=10} @self ~onSpawn
+Rat:
+  Type: SKELETON
+  Display: Plague Rat
+  Health: 20
+  Faction: GOD
+  Damage: 0
+  Armor: 0
+  DamageModifiers:
+  - FALL 0
+  Modules:
+   ThreatTable: true
+  Options:
+    NoGravity: false
+    PreventOtherDrops: true
+    Despawn: false
+    MaxCombatDistance: 256
+    PreventRandomEquipment: true
+    PreventSunburn: true
+    AttackSpeed: 0.18
+    Collidable: false
+    FollowRange: 80
+    KnockbackResistance: 100
+    MovementSpeed: 0.19
+    AttackSpeed: 1
+    Invincible: false
+    NoAI: false
+    Silent: true
+  Skills:
+  - sound{s=entity.bat.ambient;p=0.7;v=0.5} @Self ~onTimer:50
+  - model{modelid=plague_rat;damagetint=false} @Self ~onSpawn
+  - skill{s=rat1} ~onTimer:10
+  - remove{delay=500} @self ~onSpawn
+transition23:
+ Type: SKELETON
+ Display: Lobsters
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=transition_penitent_phase_3;damagetint=false} @Self ~onSpawn
+sword:
+ Type: SKELETON
+ Display: Blood Sword
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=blood_sword;damagetint=false} @Self ~onSpawn
+ - effect:particles{particle=reddust;color=#CE0B44;amount=2;hS=0;vS=0;s=0;y=0.95;size=1.2;s=0} @self ~onTimer:1
+TP2:
+ Type: SKELETON
+ Display: Blood Cut
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=transition_penitent_phase_2;damagetint=false} @Self ~onSpawn
+ - summon{type=Penitent2;amount=1;radius=0;os=true;delay=38} @self ~onSpawn
+ - remove{delay=45} @self ~onSpawn
+ - sound{s=custom:grow;p=0.5;v=2} @Self ~onSpawn
+ - sound{s=custom:splash;p=0.8;v=2;delay=15} @Self ~onSpawn
+ - sound{s=block.grass.break;p=0;v=0.5;delay=1} @Self ~onSpawn
+ - sound{s=block.grass.break;p=0;v=0.5;delay=18} @Self ~onSpawn
+ - sound{s=block.mangrove_roots.break;p=0;v=0.5;delay=15} @Self ~onSpawn
+ - sound{s=block.roots.break;p=0;v=0.5;delay=10} @Self ~onSpawn
+TP3:
+ Type: SKELETON
+ Display: Blood Cut
+ Health: 100
+ Faction: GOD
+ Options:
+  PreventOtherDrops: true
+  Despawn: false
+  MaxCombatDistance: 256
+  Silent: true
+  PreventRandomEquipment: true
+  PreventSunburn: true
+  AttackSpeed: 0.18
+  Collidable: false
+  NoAI: true
+  Invincible: true
+ Skills:
+ - model{modelid=transition_penitent_phase_3;damagetint=false} @Self ~onSpawn
+ - summon{type=Final_Penitence;amount=1;radius=0;os=true;delay=170} @self ~onSpawn
+ - remove{delay=200} @self ~onSpawn
+ - sound{s=custom:stab;p=1;v=3;delay=110} @Self ~onSpawn
