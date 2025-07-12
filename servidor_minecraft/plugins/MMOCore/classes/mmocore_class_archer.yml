@@ -1,0 +1,331 @@
+panels:
+  mmocore_class_archer:
+    rows: 6
+    title: '<shift:-64><glyph:gui_lemon_mmocore_class_gui>'
+    item:
+    
+      '45':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cpc
+        - sound= BLOCK_BARREL_CLOSE 1 2
+      '46':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cpc
+        - sound= BLOCK_BARREL_CLOSE 1 2
+      '47':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cpc
+        - sound= BLOCK_BARREL_CLOSE 1 2
+        
+      '51':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aNext'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - open= mmocore_confirm_archer
+        - sound= UI_BUTTON_CLICK 1 1
+      '52':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aNext'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - open= mmocore_confirm_archer
+        - sound= UI_BUTTON_CLICK 1 1
+      '53':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aNext'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - open= mmocore_confirm_archer
+        - sound= UI_BUTTON_CLICK 1 1
+        
+      '20':
+        material: YELLOW_DYE
+        customdata: 14
+        name: '#9494b8Mage'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_mage
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+        
+      '19':
+        material: YELLOW_DYE
+        customdata: 8
+        name: '#9494b8Mage'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_mage
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+      '28':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#9494b8Mage'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_mage
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+      '24':
+        material: YELLOW_DYE
+        customdata: 3
+        name: '#9494b8Cleric'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_cleric
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+        
+      '25':
+        material: YELLOW_DYE
+        customdata: 11
+        name: '#9494b8Cleric'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_cleric
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+      '34':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#9494b8Cleric'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_cleric
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+        
+      '3':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '4':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '5':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '12':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '13':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '14':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '21':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '22':
+        material: YELLOW_DYE
+        customdata: 6
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '23':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '30':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '31':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '32':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Archer'
+        lore:
+        - '#fff0b3He grew up with wolves and is an'
+        - '#fff0b3expert in wild hunting.'
+        - '#fff0b3An expert in ranged weapons and traps'
+        - '#fff0b3the archer moves with agility '
+        - '#fff0b3shooting arrows like lightning.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+
+
+
+  mmocore_confirm_archer:
+    rows: 6
+    title: '<shift:-64><glyph:gui_lemon_mmocore_confirm_archer>'
+    item:
+    
+      '25':
+        material: YELLOW_DYE
+        customdata: 6
+    
+      '45':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cp mmocore_class_archer
+        - sound= UI_BUTTON_CLICK 1 1
+      '46':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cp mmocore_class_archer
+        - sound= UI_BUTTON_CLICK 1 1
+      '47':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cp mmocore_class_archer
+        - sound= UI_BUTTON_CLICK 1 1
+        
+      '51':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aConfirm'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - sound= BLOCK_ENCHANTMENT_TABLE_USE 1 0.5
+        - console= mmocore admin class %cp-player-name% archer
+      '52':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aConfirm'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - sound= BLOCK_ENCHANTMENT_TABLE_USE 1 0.5
+        - console= mmocore admin class %cp-player-name% archer
+      '53':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aConfirm'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - sound= BLOCK_ENCHANTMENT_TABLE_USE 1 0.5
+        - console= mmocore admin class %cp-player-name% archer
+

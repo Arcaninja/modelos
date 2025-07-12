@@ -1,0 +1,1 @@
+{"textures":{"4":"modelengine:entity/heavens_portal"},"elements":[{"from":[8.0,-5.0,8.0],"to":[8.0,8.0,21.0],"faces":{"east":{"uv":[16.0,10.0,10.0,16.0],"tintindex":0,"rotation":0,"texture":"#4"},"west":{"uv":[10.0,10.0,16.0,16.0],"tintindex":0,"rotation":0,"texture":"#4"}},"rotation":{"origin":[8.0,8.0,8.0],"angle":45.0,"axis":"x"}}],"display":{"gui":{"rotation":[30,225,0]}}}

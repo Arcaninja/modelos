@@ -1,0 +1,1 @@
+{"textures":{"2":"modelengine:entity/blood_sword"},"elements":[{"from":[8.0,8.0,6.6],"to":[8.005,24.0,10.4],"faces":{"east":{"uv":[4.0,0.0,0.0,16.0],"tintindex":0,"rotation":0,"texture":"#2"},"west":{"uv":[0.0,0.0,4.0,16.0],"tintindex":0,"rotation":0,"texture":"#2"}}}],"display":{"gui":{"rotation":[30,225,0]}}}

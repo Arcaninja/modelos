@@ -1,0 +1,30 @@
+gui_lemon_mmocore_class_gui:
+  texture: lemon_gui/mmocore_class_gui
+  ascent: 131
+  height: 256
+  char: ꐟ
+gui_lemon_mmocore_confirm_archer:
+  texture: lemon_gui/mmocore_confirm_archer
+  ascent: 131
+  height: 256
+  char: ꐶ
+gui_lemon_mmocore_confirm_cleric:
+  texture: lemon_gui/mmocore_confirm_cleric
+  ascent: 131
+  height: 256
+  char: ꐷ
+gui_lemon_mmocore_confirm_mage:
+  texture: lemon_gui/mmocore_confirm_mage
+  ascent: 131
+  height: 256
+  char: ꐸ
+gui_lemon_mmocore_confirm_rogue:
+  texture: lemon_gui/mmocore_confirm_rogue
+  ascent: 131
+  height: 256
+  char: ꐹ
+gui_lemon_mmocore_confirm_warrior:
+  texture: lemon_gui/mmocore_confirm_warrior
+  ascent: 131
+  height: 256
+  char: ꐺ

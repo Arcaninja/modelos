@@ -1,0 +1,331 @@
+panels:
+  mmocore_class_mage:
+    rows: 6
+    title: '<shift:-64><glyph:gui_lemon_mmocore_class_gui>'
+    item:
+    
+      '45':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cpc
+        - sound= BLOCK_BARREL_CLOSE 1 2
+      '46':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cpc
+        - sound= BLOCK_BARREL_CLOSE 1 2
+      '47':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cpc
+        - sound= BLOCK_BARREL_CLOSE 1 2
+        
+      '51':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aNext'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - open= mmocore_confirm_mage
+        - sound= UI_BUTTON_CLICK 1 1
+      '52':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aNext'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_confirm_mage
+        - sound= UI_BUTTON_CLICK 1 1
+      '53':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aNext'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_confirm_mage
+        - sound= UI_BUTTON_CLICK 1 1
+        
+      '20':
+        material: YELLOW_DYE
+        customdata: 14
+        name: '#9494b8Warrior'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_warrior
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+        
+      '19':
+        material: YELLOW_DYE
+        customdata: 7
+        name: '#9494b8Warrior'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_warrior
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+      '28':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#9494b8Warrior'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_warrior
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+      '24':
+        material: YELLOW_DYE
+        customdata: 3
+        name: '#9494b8Archer'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_archer
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+        
+      '25':
+        material: YELLOW_DYE
+        customdata: 9
+        name: '#9494b8Archer'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_archer
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+      '34':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#9494b8Archer'
+        lore:
+        - '&7&oClick for class info'
+        commands:
+        - open= mmocore_class_archer
+        - sound= BLOCK_BAMBOO_WOOD_BUTTON_CLICK_ON 1 2
+        
+      '3':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '4':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '5':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '12':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '13':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '14':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '21':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '22':
+        material: YELLOW_DYE
+        customdata: 5
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '23':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '30':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '31':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+      '32':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '#ffcc00Mage'
+        lore:
+        - '#fff0b3He learned magical techniques by'
+        - '#fff0b3studying cosmology and is now able'
+        - '#fff0b3to shape the flow of mana with'
+        - '#fff0b3which the earth is infused. The mage'
+        - '#fff0b3dominates the unknown with knowledge.'
+        - ''
+        - '&7&oclick &aNext &7&oto confirm.'
+
+
+
+  mmocore_confirm_mage:
+    rows: 6
+    title: '<shift:-64><glyph:gui_lemon_mmocore_confirm_mage>'
+    item:
+    
+      '25':
+        material: YELLOW_DYE
+        customdata: 5
+    
+      '45':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cp mmocore_class_mage
+        - sound= UI_BUTTON_CLICK 1 1
+      '46':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cp mmocore_class_mage
+        - sound= UI_BUTTON_CLICK 1 1
+      '47':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&cBack'
+        lore:
+        - '&7&oClose the menu'
+        commands:
+        - cp mmocore_class_mage
+        - sound= UI_BUTTON_CLICK 1 1
+        
+      '51':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aConfirm'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - sound= BLOCK_ENCHANTMENT_TABLE_USE 1 0.5
+        - console= mmocore admin class %cp-player-name% mage
+      '52':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aConfirm'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - sound= BLOCK_ENCHANTMENT_TABLE_USE 1 0.5
+        - console= mmocore admin class %cp-player-name% mage
+      '53':
+        material: YELLOW_DYE
+        customdata: 2
+        name: '&aConfirm'
+        lore:
+        - '&7&oClick to confirm the class'
+        commands:
+        - sound= BLOCK_ENCHANTMENT_TABLE_USE 1 0.5
+        - console= mmocore admin class %cp-player-name% mage
+

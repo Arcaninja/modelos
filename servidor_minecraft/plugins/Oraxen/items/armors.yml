@@ -1,0 +1,419 @@
+# Material list for latest spigot version: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# EntityType list for latest spigot version: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+# Attribute list for latest spigot version: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html
+# Potion effects list for latest spigot version: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+# Random UUID generator: https://www.uuidgenerator.net/
+# Color codes: https://docs.adventure.kyori.net/minimessage.html#format
+
+emerald_helmet:
+  displayname: <gradient:#89E59D:#37C6BA>Emerald Helmet
+  material: PAPER
+  lore:
+  - <#6f737d>» <#D5D6D8>Gives 1 extra <glyph:heart>
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 437
+      damage_entity_hit: true
+    equippable:
+      slot: HEAD
+      model: oraxen:emerald
+  AttributeModifiers:
+  - attribute: MAX_HEALTH
+    amount: 2
+    operation: 0
+    slot: HEAD
+    uuid: 9930381a-13fb-4c2a-a4cf-6d02821dfbb8
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR
+    amount: 3
+    operation: 0
+    slot: HEAD
+    uuid: 6d7539b8-0c17-4da5-baa3-5bcd408a091f
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR_TOUGHNESS
+    amount: 2
+    operation: 0
+    slot: HEAD
+    uuid: 17a6e12d-5f78-44a4-9750-98ccd507bb47
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/emerald_helmet
+    custom_model_data: 1000
+
+emerald_chestplate:
+  displayname: <gradient:#89E59D:#37C6BA>Emerald Chestplate
+  material: PAPER
+  lore:
+  - <#6f737d>» <#D5D6D8>Gives 1.5 extra <glyph:heart>
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 635
+      damage_entity_hit: true
+    equippable:
+      slot: CHEST
+      model: oraxen:emerald
+  AttributeModifiers:
+  - attribute: MAX_HEALTH
+    amount: 3
+    operation: 0
+    slot: CHEST
+    uuid: 9c8d6383-ea14-4d5c-871d-a23395154d3d
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR
+    amount: 8
+    operation: 0
+    slot: CHEST
+    uuid: 05473535-1dd7-49af-b859-6a48739f0e2c
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR_TOUGHNESS
+    amount: 2
+    operation: 0
+    slot: CHEST
+    uuid: ee00ac47-c0a8-42b3-8ac1-3f11ceb8ce38
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/emerald_chestplate
+    custom_model_data: 1001
+
+emerald_leggings:
+  displayname: <gradient:#89E59D:#37C6BA>Emerald Leggings
+  material: PAPER
+  lore:
+  - <#6f737d>» <#D5D6D8>Gives 1.5 extra <glyph:heart>
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 595
+      damage_entity_hit: true
+    equippable:
+      slot: LEGS
+      model: oraxen:emerald
+  AttributeModifiers:
+  - attribute: MAX_HEALTH
+    amount: 3
+    operation: 0
+    slot: LEGS
+    uuid: 353f0973-4f98-4b5c-b200-6aad11c1fe22
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR
+    amount: 6
+    operation: 0
+    slot: LEGS
+    uuid: cbce0fa3-d029-458d-8a8c-741741337029
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR_TOUGHNESS
+    amount: 2
+    operation: 0
+    slot: LEGS
+    uuid: 767f9da3-ec71-4496-9fb4-a135007f47ae
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/emerald_leggings
+    custom_model_data: 1002
+
+emerald_boots:
+  displayname: <gradient:#89E59D:#37C6BA>Emerald Boots
+  material: PAPER
+  lore:
+  - <#6f737d>» <#D5D6D8>Gives 1 extra <glyph:heart>
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 516
+      damage_entity_hit: true
+    equippable:
+      slot: FEET
+      model: oraxen:emerald
+  AttributeModifiers:
+  - attribute: MAX_HEALTH
+    amount: 2
+    operation: 0
+    slot: FEET
+    uuid: d36c3e05-63b2-4aa7-bf8e-704c7df890e3
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR
+    amount: 3
+    operation: 0
+    slot: FEET
+    uuid: 35c9f81b-60f5-4963-ad06-dc042e7f3560
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR_TOUGHNESS
+    amount: 2
+    operation: 0
+    slot: FEET
+    uuid: 37640077-cf61-458d-b2bc-2e56e05796b0
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/emerald_boots
+    custom_model_data: 1003
+
+obsidian_helmet:
+  displayname: <gradient:#4B36B1:#6699FF>Obsidian Helmet
+  material: PAPER
+  lore:
+  - <#6f737d>» <#D5D6D8>Ludicrous durability
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 4370
+      damage_entity_hit: true
+    equippable:
+      slot: HEAD
+      model: oraxen:obsidian
+  AttributeModifiers:
+  - attribute: ARMOR
+    amount: 2
+    operation: 0
+    slot: HEAD
+    uuid: 5da358c3-e1b5-452d-8a87-830082172969
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/obsidian_helmet
+    custom_model_data: 1004
+
+obsidian_chestplate:
+  custom_model_data: 2
+  displayname: <gradient:#4B36B1:#6699FF>Obsidian Chestplate
+  material: PAPER
+  lore:
+  - <#6f737d>» <#D5D6D8>Ludicrous durability
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 6350
+      damage_entity_hit: true
+    equippable:
+      slot: CHEST
+      model: oraxen:obsidian
+  AttributeModifiers:
+  - attribute: ARMOR
+    amount: 6
+    operation: 0
+    slot: CHEST
+    uuid: 6c3e2259-feea-4461-841e-a565a1c01f0e
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/obsidian_chestplate
+    custom_model_data: 1005
+
+obsidian_leggings:
+  displayname: <gradient:#4B36B1:#6699FF>Obsidian Leggings
+  material: PAPER
+  lore:
+  - <#6f737d>» <#D5D6D8>Ludicrous durability
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 5950
+      damage_entity_hit: true
+    equippable:
+      slot: LEGS
+      model: oraxen:obsidian
+  AttributeModifiers:
+  - attribute: ARMOR
+    amount: 5
+    operation: 0
+    slot: LEGS
+    uuid: 4fd1efbd-e7e1-44b4-9bc1-6b21d001042c
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/obsidian_leggings
+    custom_model_data: 1006
+
+obsidian_boots:
+  displayname: <gradient:#4B36B1:#6699FF>Boots Boots
+  material: PAPER
+  lore:
+  - <#6f737d>» <#D5D6D8>Ludicrous durability
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 5160
+      damage_entity_hit: true
+    equippable:
+      slot: FEET
+      model: oraxen:obsidian
+  AttributeModifiers:
+  - attribute: ARMOR
+    amount: 2
+    operation: 0
+    slot: FEET
+    uuid: 56122625-1f16-4095-8927-95b8f346340b
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/obsidian_boots
+    custom_model_data: 1007
+
+ruby_helmet:
+  displayname: <gradient:#FA7CBB:#F14658>Ruby Helmet
+  material: PAPER
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 547
+      damage_entity_hit: true
+    equippable:
+      slot: HEAD
+      model: oraxen:ruby
+  AttributeModifiers:
+  - attribute: ARMOR
+    amount: 3
+    operation: 0
+    slot: HEAD
+    uuid: 76463f7a-b43b-44b4-98e3-4b5f70efb080
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR_TOUGHNESS
+    amount: 2
+    operation: 0
+    slot: HEAD
+    uuid: bf272801-0024-4a8d-9e6b-e10fd09443d7
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/ruby_helmet
+    custom_model_data: 1008
+
+ruby_chestplate:
+  displayname: <gradient:#FA7CBB:#F14658>Ruby Chestplate
+  material: PAPER
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 792
+      damage_entity_hit: true
+    equippable:
+      slot: CHEST
+      model: oraxen:ruby
+  AttributeModifiers:
+  - attribute: ARMOR
+    amount: 8
+    operation: 0
+    slot: CHEST
+    uuid: 1e494083-4b1c-403b-bfd6-6d8775e3ade2
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR_TOUGHNESS
+    amount: 2
+    operation: 0
+    slot: CHEST
+    uuid: 95fb5724-88a2-4247-9a46-7853820b3921
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/ruby_chestplate
+    custom_model_data: 1009
+
+ruby_leggings:
+  displayname: <gradient:#FA7CBB:#F14658>Ruby Leggings
+  material: PAPER
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 742
+      damage_entity_hit: true
+    equippable:
+      slot: LEGS
+      model: oraxen:ruby
+  AttributeModifiers:
+  - attribute: ARMOR
+    amount: 6
+    operation: 0
+    slot: LEGS
+    uuid: 32880f1a-feb1-481f-ad75-0c0fb3e848ac
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR_TOUGHNESS
+    amount: 2
+    operation: 0
+    slot: LEGS
+    uuid: f8248adc-cea2-497a-bfd9-0bcfd2d6d0fc
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/ruby_leggings
+    custom_model_data: 1010
+
+ruby_boots:
+  displayname: <gradient:#FA7CBB:#F14658>Ruby Boots
+  material: PAPER
+  Components:
+    max_stack_size: 1
+    durability:
+      value: 643
+      damage_entity_hit: true
+    equippable:
+      slot: FEET
+      model: oraxen:ruby
+  AttributeModifiers:
+  - attribute: ARMOR
+    amount: 3
+    operation: 0
+    slot: FEET
+    uuid: 31250572-ab33-4f08-8f11-dadf8635d6ec
+    name: oraxen:modifier
+    key: oraxen:modifier
+  - attribute: ARMOR_TOUGHNESS
+    amount: 2
+    operation: 0
+    slot: FEET
+    uuid: db447a43-72bf-45dd-9de5-e070d54c7592
+    name: oraxen:modifier
+    key: oraxen:modifier
+  Pack:
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - default/armors/ruby_boots
+    custom_model_data: 1011

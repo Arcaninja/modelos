@@ -1,0 +1,96 @@
+lemon_mmocore_class_selection_before:
+  Pack:
+    custom_model_data: 3
+    generate_model: false
+    model: lemon_mmocore_class_selection/mmocore_before
+  displayname: mmocore_before
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_warrior:
+  Pack:
+    custom_model_data: 4
+    generate_model: false
+    model: lemon_mmocore_class_selection/warrior
+  displayname: warrior
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_mage:
+  Pack:
+    custom_model_data: 5
+    generate_model: false
+    model: lemon_mmocore_class_selection/mage
+  displayname: mmocore_mage
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_marksman:
+  Pack:
+    custom_model_data: 6
+    generate_model: false
+    model: lemon_mmocore_class_selection/marksman
+  displayname: mmocore_marksman
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_warrior_black:
+  Pack:
+    custom_model_data: 7
+    generate_model: false
+    model: lemon_mmocore_class_selection/warrior_black
+  displayname: warrior_black
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_mage_black:
+  Pack:
+    custom_model_data: 8
+    generate_model: false
+    model: lemon_mmocore_class_selection/mage_black
+  displayname: mage_black
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_marksman_black:
+  Pack:
+    custom_model_data: 9
+    generate_model: false
+    model: lemon_mmocore_class_selection/marksman_black
+  displayname: marksman_black
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_cleric:
+  Pack:
+    custom_model_data: 10
+    generate_model: false
+    model: lemon_mmocore_class_selection/cleric
+  displayname: cleric
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_cleric_black:
+  Pack:
+    custom_model_data: 11
+    generate_model: false
+    model: lemon_mmocore_class_selection/cleric_black
+  displayname: cleric_black
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_rogue:
+  Pack:
+    custom_model_data: 12
+    generate_model: false
+    model: lemon_mmocore_class_selection/rogue
+  displayname: rogue
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_rogue_black:
+  Pack:
+    custom_model_data: 13
+    generate_model: false
+    model: lemon_mmocore_class_selection/rogue_black
+  displayname: rogue_black
+  material: YELLOW_DYE
+  permission: lemon_mmocore
+lemon_mmocore_class_selection_next:
+  Pack:
+    custom_model_data: 14
+    generate_model: false
+    model: lemon_mmocore_class_selection/mmocore_next
+  displayname: mmocore_next
+  material: YELLOW_DYE
+  permission: lemon_mmocore

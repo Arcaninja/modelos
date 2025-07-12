@@ -1,0 +1,1 @@
+{"textures":{"1":"modelengine:entity/penitent_effects"},"elements":[{"from":[5.75,7.8500004,5.5],"to":[22.25,7.8549995,11.5],"faces":{"up":{"uv":[9.25,0.25,13.375,1.75],"tintindex":0,"rotation":0,"texture":"#1"},"down":{"uv":[9.25,1.75,13.375,0.25],"tintindex":0,"rotation":0,"texture":"#1"}}}],"display":{"gui":{"rotation":[30,225,0]}}}
